@@ -16,11 +16,14 @@ public class MainActivity extends AppCompatActivity {
     private int current_image_alt=0;
     private int change_image=0;
     int[][] images={
-
-            {R.drawable.dab_right, R.drawable.dab_left},
-            {R.drawable.monalisa_left, R.drawable.monalisa_right},
-            {R.drawable.squidward_left, R.drawable.squidward_right},
-            {R.drawable.low_dab_left, R.drawable.low_dab_right}
+        
+        {R.drawable.emoji_left, R.drawable.emoji_right},
+        {R.drawable.monalisa_left, R.drawable.monalisa_right},
+        {R.drawable.squidward_left, R.drawable.squidward_right},
+        {R.drawable.low_dab_left, R.drawable.low_dab_right},
+        {R.drawable.fortnite_left, R.drawable.fortnite_right},
+        {R.drawable.panda_left, R.drawable.panda_right},
+        {R.drawable.unicorn_left, R.drawable.unicorn_right}
 
     };
 
