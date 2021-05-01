@@ -15,8 +15,10 @@ public class MainActivity extends AppCompatActivity {
 
     private static ImageView imgview;
     private  Button left_right_dab;
-    private int current_image_alt=0;
-    private int change_image=0;
+    private int current_image_alt = 0;
+    private int change_image = 0;
+    private int change = 0;
+    private int image_check = 1;
     public int clickCount = 0;
     private TextView countTextBox;
     int[][] images={
@@ -38,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         dab_buttonclick();
         change_dabbing_char();
+        change_dabbing_char1();
+
     }
 
     public void dab_buttonclick()
@@ -50,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view){
                         clickCount++;
+                        image_check=clickCount/10+1;
                         countTextBox=findViewById(R.id.textView);
                         String clicks = String.valueOf(clickCount);
                         countTextBox.setText("Cringe Counter: " + clicks);
@@ -57,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                         current_image_alt++;
                         current_image_alt=current_image_alt % 2;
                         Log.i("MyApp","currentimg,left right");
-                        imgview.setImageResource(images[change_image][current_image_alt]);
+                        imgview.setImageResource(images[change][current_image_alt]);
                     }
                 }
         );
@@ -72,12 +77,33 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener(){
                     @Override
                     public void onClick(View view){
+
                         change_image++;
-                        change_image=change_image % images.length;
+                        change=change_image % image_check;
                         Log.i("App", "change char");
-                        imgview.setImageResource(images[change_image][current_image_alt]);
+                        imgview.setImageResource(images[change][current_image_alt]);
                     }
                 }
         );
     }
+    public void change_dabbing_char1()
+    {
+        imgview=(ImageView)findViewById(R.id.dab);
+        Button change_char1 = (Button) findViewById(R.id.DiffDab1);
+
+        change_char1.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick(View view){
+                        if (change_image >0) {
+                            change_image--;
+                        }
+                        change=change_image % image_check;
+                        Log.i("App", "change char");
+                        imgview.setImageResource(images[change][current_image_alt]);
+                    }
+                }
+        );
+    }
+
 }
