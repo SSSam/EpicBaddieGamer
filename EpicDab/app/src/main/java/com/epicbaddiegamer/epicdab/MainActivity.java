@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -15,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     private  Button left_right_dab;
     private int current_image_alt=0;
     private int change_image=0;
+    public int clickCount = 0;
+    private TextView countTextBox;
     int[][] images={
         
         {R.drawable.emoji_left, R.drawable.emoji_right},
@@ -45,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener(){
                     @Override
                     public void onClick(View view){
+                        clickCount++;
+                        countTextBox=findViewById(R.id.textView);
+                        String clicks = String.valueOf(clickCount);
+                        countTextBox.setText("Score: " + clicks);
+
                         current_image_alt++;
                         current_image_alt=current_image_alt % 2;
                         Log.i("MyApp","currentimg,left right");
