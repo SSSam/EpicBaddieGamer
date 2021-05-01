@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     public int clickCount = 0;
     private TextView countTextBox;
     int[][] images={
-        
         {R.drawable.emoji_left, R.drawable.emoji_right},
         {R.drawable.monalisa_left, R.drawable.monalisa_right},
         {R.drawable.squidward_left, R.drawable.squidward_right},
@@ -29,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
         {R.drawable.panda_left, R.drawable.panda_right},
         {R.drawable.waluigi_left, R.drawable.waluigi_right},
         {R.drawable.penguin_left, R.drawable.penguin_right},
-        {R.drawable.shrek_left, R.drawable.shrek_right}
+        {R.drawable.shrek_left, R.drawable.shrek_right},
+        {R.drawable.thanos_left, R.drawable.thanos_right}
     };
 
     @Override
@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         dab_buttonclick();
         change_dabbing_char();
     }
-
 
     public void dab_buttonclick()
     {
@@ -53,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                         clickCount++;
                         countTextBox=findViewById(R.id.textView);
                         String clicks = String.valueOf(clickCount);
-                        countTextBox.setText("Score: " + clicks);
+                        countTextBox.setText("Cringe Counter: " + clicks);
 
                         current_image_alt++;
                         current_image_alt=current_image_alt % 2;
@@ -63,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
     }
+
     public void change_dabbing_char()
     {
         imgview=(ImageView)findViewById(R.id.dab);
@@ -80,6 +80,4 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
     }
-
-
 }
