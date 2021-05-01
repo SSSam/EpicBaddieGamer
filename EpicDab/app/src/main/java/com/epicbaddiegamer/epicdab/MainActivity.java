@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private static ImageView imgview;
     private static Button buttonsbm;
     private int current_image;
-    int[] images={R.drawable.dab_right, R.drawable.dab_left};
+    int[] images={R.drawable.emoji_right, R.drawable.emoji_left, R.drawable.low_dab_right, R.drawable.low_dab_left, R.drawable.panda_right, R.drawable.panda_left, R.drawable.squidward_right, R.drawable.squidward_left};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
