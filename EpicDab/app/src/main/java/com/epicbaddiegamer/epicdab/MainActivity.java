@@ -27,8 +27,9 @@ public class MainActivity extends AppCompatActivity {
         {R.drawable.low_dab_left, R.drawable.low_dab_right},
         {R.drawable.fortnite_left, R.drawable.fortnite_right},
         {R.drawable.panda_left, R.drawable.panda_right},
-        {R.drawable.unicorn_left, R.drawable.unicorn_right}
-
+        {R.drawable.waluigi_left, R.drawable.waluigi_right},
+        {R.drawable.penguin_left, R.drawable.penguin_right},
+        {R.drawable.shrek_left, R.drawable.shrek_right}
     };
 
     @Override
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void dab_buttonclick()
     {
-        imgview=(ImageView)findViewById(R.id.emoji);
+        imgview=(ImageView)findViewById(R.id.dab);
         left_right_dab=(Button)findViewById(R.id.dabButton);
 
         left_right_dab.setOnClickListener(
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void change_dabbing_char()
     {
-        imgview=(ImageView)findViewById(R.id.emoji);
+        imgview=(ImageView)findViewById(R.id.dab);
         Button change_char = (Button) findViewById(R.id.DiffDab);
 
         change_char.setOnClickListener(

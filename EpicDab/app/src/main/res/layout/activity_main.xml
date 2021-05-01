@@ -8,7 +8,7 @@
 
     <ImageView
             android:layout_width="316dp"
-            android:layout_height="233dp" app:srcCompat="@drawable/dab_right" android:id="@+id/emoji"
+            android:layout_height="233dp" app:srcCompat="@drawable/emoji_right" android:id="@+id/dab"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.494"
@@ -19,7 +19,7 @@
             android:layout_height="wrap_content" android:id="@+id/dabButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emoji"/>
+            app:layout_constraintTop_toBottomOf="@+id/dab"/>
 
     <Button
             android:id="@+id/DiffDab"
