@@ -16,14 +16,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView imgview;
+    private static ImageView imgview;
+    private  Button left_right_dab;
     private int current_image_alt = 1;
     private int change_image = 0;
     private int change = 0;
     private int image_check = 1;
     public int clickCount = 0;
     private TextView countTextBox;
-
     int[][] images={
         {R.drawable.emoji_left, R.drawable.emoji_right},
         {R.drawable.panda_left, R.drawable.panda_right},
@@ -47,12 +47,10 @@ public class MainActivity extends AppCompatActivity {
         change_dabbing_char1();
 
     }
-
     public void dab_buttonclick()
     {
-        Button left_right_dab;
-        imgview = findViewById(R.id.dab);
-        left_right_dab = findViewById(R.id.dabButton);
+        imgview=(ImageView)findViewById(R.id.dab);
+        left_right_dab=(Button)findViewById(R.id.dabButton);
 
         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.baddie_unlocked);
         Toast toast = Toast.makeText(getApplicationContext(), "New Baddie Unlocked !!!", Toast.LENGTH_SHORT);
@@ -85,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void change_dabbing_char()
     {
-        imgview = findViewById(R.id.dab);
-        Button change_char = findViewById(R.id.DiffDab);
+        imgview=(ImageView)findViewById(R.id.dab);
+        Button change_char = (Button) findViewById(R.id.DiffDab);
 
         change_char.setOnClickListener(
                 new View.OnClickListener(){
@@ -101,11 +99,10 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
     }
-
     public void change_dabbing_char1()
     {
-        imgview = findViewById(R.id.dab);
-        Button change_char1 = findViewById(R.id.DiffDab1);
+        imgview=(ImageView)findViewById(R.id.dab);
+        Button change_char1 = (Button) findViewById(R.id.DiffDab1);
 
         change_char1.setOnClickListener(
                 new View.OnClickListener(){
