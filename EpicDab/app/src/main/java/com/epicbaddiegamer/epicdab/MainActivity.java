@@ -127,9 +127,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void change_dabbing_char1() {
-        imgview = (ImageView) findViewById(R.id.dab);
-        Button change_char1 = (Button) findViewById(R.id.DiffDab1);
 
 
     // Left button to change dabbing character
@@ -173,3 +170,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+

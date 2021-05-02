@@ -65,7 +65,7 @@
         android:layout_height="52dp"
         android:layout_marginBottom="5mm"
         android:gravity="center"
-        android:text="Dab Master (All Unlocks)"
+        android:text="Thanos (All Unlocks)"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FD0000"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
