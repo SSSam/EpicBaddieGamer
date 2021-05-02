@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private int current_image_alt = 1;
     private int change_image = 0;
     private int change = 0;
-    private int image_check = 2;
+    private int image_check = 1;
     public int clickCount = 0;
     private TextView countTextBox;
     int[][] images={
