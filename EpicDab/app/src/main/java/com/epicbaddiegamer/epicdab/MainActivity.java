@@ -23,14 +23,15 @@ public class MainActivity extends AppCompatActivity {
     private TextView countTextBox;
     int[][] images={
         {R.drawable.emoji_left, R.drawable.emoji_right},
+        {R.drawable.panda_left, R.drawable.panda_right},
+        {R.drawable.penguin_left, R.drawable.penguin_right},
         {R.drawable.monalisa_left, R.drawable.monalisa_right},
+        {R.drawable.fortnite_left, R.drawable.fortnite_right},
+        {R.drawable.minecraft_left, R.drawable.minecraft_right},
         {R.drawable.squidward_left, R.drawable.squidward_right},
         {R.drawable.low_dab_left, R.drawable.low_dab_right},
-        {R.drawable.fortnite_left, R.drawable.fortnite_right},
-        {R.drawable.panda_left, R.drawable.panda_right},
-        {R.drawable.waluigi_left, R.drawable.waluigi_right},
-        {R.drawable.penguin_left, R.drawable.penguin_right},
         {R.drawable.shrek_left, R.drawable.shrek_right},
+        {R.drawable.waluigi_left, R.drawable.waluigi_right},
         {R.drawable.thanos_left, R.drawable.thanos_right}
     };
 
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view){
                         clickCount++;
-                        image_check=clickCount/10+1;
+                        image_check=clickCount/50+1;
                         countTextBox=findViewById(R.id.textView);
                         String clicks = String.valueOf(clickCount);
                         countTextBox.setText("Cringe Counter: " + clicks);
