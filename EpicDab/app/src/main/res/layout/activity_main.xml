@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingTop="?attr/actionBarSize">
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/dab"
@@ -31,8 +29,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dab"
-            app:layout_constraintVertical_bias="0.488"/>
-
+            app:layout_constraintVertical_bias="0.456"/>
     <Button
             android:id="@+id/DiffDab"
             android:layout_width="wrap_content"
@@ -49,19 +46,20 @@
             app:layout_constraintTop_toBottomOf="@+id/dabButton"
             app:layout_constraintVertical_bias="0.469"/>
 
+
     <TextView
 
-        android:id="@+id/textView"
-        android:layout_width="329dp"
-        android:layout_height="95dp"
-        android:gravity="center|center_horizontal"
-        android:text="Cringe Counter: 0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toTopOf="@+id/dab"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
+            android:id="@+id/textView"
+            android:layout_width="329dp"
+            android:layout_height="95dp"
+            android:gravity="center|center_horizontal"
+            android:text="@string/cringe_counter"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="56dp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.129" app:layout_constraintBottom_toBottomOf="parent"
+    />
     <Button
             android:id="@+id/DiffDab1"
             android:layout_width="wrap_content"
@@ -79,14 +77,15 @@
             app:layout_constraintVertical_bias="0.469"/>
 
     <Button
-        android:id="@+id/button"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="-11dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Achievements"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/achievements"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/DiffDab1"
+            app:layout_constraintVertical_bias="0.0" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.974"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
