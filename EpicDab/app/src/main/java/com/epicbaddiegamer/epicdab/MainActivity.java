@@ -5,7 +5,6 @@ import android.os.Bundle;
 
 import android.util.Log;
 import android.view.Gravity;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,15 +15,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static ImageView imgview;
-    private  Button left_right_dab;
+    private ImageView imgView;
     private int current_image_alt = 1;
     private int change_image = 0;
     private int change = 0;
     private int image_check = 1;
     public int clickCount = 0;
     private TextView countTextBox;
-    int[][] images={
+
+    int[][] images = {
         {R.drawable.emoji_left, R.drawable.emoji_right},
         {R.drawable.panda_left, R.drawable.panda_right},
         {R.drawable.penguin_left, R.drawable.penguin_right},
@@ -42,21 +41,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        dab_buttonclick();
+        dabButtonClick();
         change_dabbing_char();
         change_dabbing_char1();
-
     }
+<<<<<<< HEAD
     public void dab_buttonclick()
+=======
+
+    public void dabButtonClick()
+>>>>>>> 75b822a16e7242b117150236e14dfa5a22c965d5
     {
-        imgview=(ImageView)findViewById(R.id.dab);
-        left_right_dab=(Button)findViewById(R.id.dabButton);
+        Button left_right_dab;
+        imgView = findViewById(R.id.dab);
+        left_right_dab = findViewById(R.id.dabButton);
 
         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.baddie_unlocked);
         Toast toast = Toast.makeText(getApplicationContext(), "New Baddie Unlocked !!!", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER,0,480);
 
         left_right_dab.setOnClickListener(
+<<<<<<< HEAD
                 new View.OnClickListener(){
 
                     @Override
@@ -76,6 +81,24 @@ public class MainActivity extends AppCompatActivity {
                             toast.show();
                             mp.start();
                         }
+=======
+                view -> {
+                    clickCount++;
+                    image_check=clickCount/50+1;
+                    countTextBox=findViewById(R.id.textView);
+                    String clicks = String.valueOf(clickCount);
+                    countTextBox.setText("Cringe Counter: " + clicks);
+
+                    current_image_alt++;
+                    current_image_alt=current_image_alt % 2;
+                    Log.i("MyApp","currentImg,left right");
+                    imgView.setImageResource(images[change][current_image_alt]);
+
+                    if (clickCount % 50 == 0 && clickCount != 0) {
+                        Toast toast = Toast.makeText(getApplicationContext(), "New Baddie Unlocked !!!", Toast.LENGTH_SHORT);
+                        toast.setGravity(Gravity.CENTER,0,480);
+                        toast.show();
+>>>>>>> 75b822a16e7242b117150236e14dfa5a22c965d5
                     }
                 }
         );
@@ -83,38 +106,31 @@ public class MainActivity extends AppCompatActivity {
 
     public void change_dabbing_char()
     {
-        imgview=(ImageView)findViewById(R.id.dab);
-        Button change_char = (Button) findViewById(R.id.DiffDab);
+        imgView = findViewById(R.id.dab);
+        Button change_char = findViewById(R.id.DiffDab);
 
         change_char.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick(View view){
-
-                        change_image++;
-                        change= (change_image % image_check) % images.length;
-                        Log.i("App", "change char");
-                        imgview.setImageResource(images[change][current_image_alt]);
-                    }
+                view -> {
+                    change_image++;
+                    change= (change_image % image_check) % images.length;
+                    Log.i("App", "change char");
+                    imgView.setImageResource(images[change][current_image_alt]);
                 }
         );
     }
     public void change_dabbing_char1()
     {
-        imgview=(ImageView)findViewById(R.id.dab);
-        Button change_char1 = (Button) findViewById(R.id.DiffDab1);
+        imgView = findViewById(R.id.dab);
+        Button change_char1 = findViewById(R.id.DiffDab1);
 
         change_char1.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick(View view){
-                        if (change_image >0) {
-                            change_image--;
-                        }
-                        change= (change_image % image_check) % images.length ;
-                        Log.i("App", "change char");
-                        imgview.setImageResource(images[change][current_image_alt]);
+                view -> {
+                    if (change_image >0) {
+                        change_image--;
                     }
+                    change= (change_image % image_check) % images.length ;
+                    Log.i("App", "change char");
+                    imgView.setImageResource(images[change][current_image_alt]);
                 }
         );
     }
