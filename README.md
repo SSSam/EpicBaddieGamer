@@ -1,6 +1,5 @@
-## Welcome to EpicBaddieGamers
-![alt text](./EpicDab/app/src/main/res/drawable/icon.png) <br/>
-## Inspiration
+# Welcome to EpicBaddieGamers
+## Our Inspiration
 It may be 2021, but in our hearts dabbing is not dead like our souls! We wanted to spread the joy of dabbing once more, cause we could all use a little more cringe in our lives. 
 ## What it does
 Dab at the haters and unlock new baddies to dab with! Features 100% original, copyright-free characters.
@@ -16,10 +15,13 @@ Android Studio / Java / Teamwork :)
 More achievements? Auto-clicking features? Idle dabbing? Possibilities are endless. Wow...
 And maybe~~ Launch our app in the Google Play Store
 ## Quick Demo
-https://www.youtube.com/watch?v=P-wck_ZiZ7I
+
+[![](http://img.youtube.com/vi/P-wck_ZiZ7I/0.jpg)](http://www.youtube.com/watch?v=P-wck_ZiZ7I "EpicBaddieGamer")
 
 ## Developers:
  * Dawu Liu 
  * Jacob He 
  * Samuel Jen
  * Sarah Li
+
+<img src="/EpicDab/app/src/main/res/drawable/icon.png" alt="drawing" width="200"/>
