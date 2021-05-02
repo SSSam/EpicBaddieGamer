@@ -57,8 +57,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view){
 
-                        if (clickCount % 50 == 0 && (clickCount % 50) <= images.length) {
-                            Toast toast = Toast.makeText(getApplicationContext(), "New Baddie Unlocked !!!", 0);
+                        if (clickCount % 49 == 0 && (clickCount % 49) <= images.length && clickCount != 0) {
+                            Toast toast = Toast.makeText(getApplicationContext(), "New Baddie Unlocked !!!", Toast.LENGTH_SHORT);
+                            toast.setGravity(Gravity.CENTER,0,480);
                             toast.show();
                         }
                         clickCount++;
