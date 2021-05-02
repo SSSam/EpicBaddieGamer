@@ -3,10 +3,12 @@ package com.epicbaddiegamer.epicdab;
 import android.os.Bundle;
 
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static ImageView imgview;
     private  Button left_right_dab;
-    private int current_image_alt = 0;
+    private int current_image_alt = 1;
     private int change_image = 0;
     private int change = 0;
     private int image_check = 1;
@@ -54,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener(){
                     @Override
                     public void onClick(View view){
+
+                        if (clickCount % 50 == 0 && (clickCount % 50) <= images.length) {
+                            Toast toast = Toast.makeText(getApplicationContext(), "New Baddie Unlocked !!!", 0);
+                            toast.show();
+                        }
                         clickCount++;
                         image_check=clickCount/50+1;
                         countTextBox=findViewById(R.id.textView);
