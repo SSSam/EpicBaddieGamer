@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View view){
 
                         change_image++;
-                        change=change_image % image_check;
+                        change= (change_image % image_check) % images.length;
                         Log.i("App", "change char");
                         imgview.setImageResource(images[change][current_image_alt]);
                     }
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                         if (change_image >0) {
                             change_image--;
                         }
-                        change=change_image % image_check;
+                        change= (change_image % image_check) % images.length ;
                         Log.i("App", "change char");
                         imgview.setImageResource(images[change][current_image_alt]);
                     }
