@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private int current_image_alt = 1;
     private int change_image = 0;
     private int change = 0;
-    private int image_check = 1;
+    private int image_check = 2;
     public int clickCount = 0;
     private TextView countTextBox;
     int[][] images={
@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         dab_buttonclick();
         change_dabbing_char();
         change_dabbing_char1();
-
     }
     public void dab_buttonclick()
     {
@@ -103,7 +102,6 @@ public class MainActivity extends AppCompatActivity {
     {
         imgview=(ImageView)findViewById(R.id.dab);
         Button change_char1 = (Button) findViewById(R.id.DiffDab1);
-
         change_char1.setOnClickListener(
                 new View.OnClickListener(){
                     @Override
