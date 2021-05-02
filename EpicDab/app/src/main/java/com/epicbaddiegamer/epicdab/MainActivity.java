@@ -1,5 +1,6 @@
 package com.epicbaddiegamer.epicdab;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -46,14 +47,18 @@ public class MainActivity extends AppCompatActivity {
         change_dabbing_char1();
 
     }
-
     public void dab_buttonclick()
     {
         imgview=(ImageView)findViewById(R.id.dab);
         left_right_dab=(Button)findViewById(R.id.dabButton);
 
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.baddie_unlocked);
+        Toast toast = Toast.makeText(getApplicationContext(), "New Baddie Unlocked !!!", Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER,0,480);
+
         left_right_dab.setOnClickListener(
                 new View.OnClickListener(){
+
                     @Override
                     public void onClick(View view){
 
@@ -67,10 +72,9 @@ public class MainActivity extends AppCompatActivity {
                         current_image_alt=current_image_alt % 2;
                         Log.i("MyApp","currentimg,left right");
                         imgview.setImageResource(images[change][current_image_alt]);
-                        if (clickCount % 50 == 0 && (clickCount % 50) <= images.length && clickCount != 0) {
-                            Toast toast = Toast.makeText(getApplicationContext(), "New Baddie Unlocked !!!", Toast.LENGTH_SHORT);
-                            toast.setGravity(Gravity.CENTER,0,480);
+                        if (clickCount % 50 == 0 && (clickCount / 50) <= images.length && clickCount != 0) {
                             toast.show();
+                            mp.start();
                         }
                     }
                 }
@@ -114,5 +118,4 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
     }
-
 }
