@@ -57,11 +57,6 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view){
 
-                        if (clickCount % 49 == 0 && (clickCount % 49) <= images.length && clickCount != 0) {
-                            Toast toast = Toast.makeText(getApplicationContext(), "New Baddie Unlocked !!!", Toast.LENGTH_SHORT);
-                            toast.setGravity(Gravity.CENTER,0,480);
-                            toast.show();
-                        }
                         clickCount++;
                         image_check=clickCount/50+1;
                         countTextBox=findViewById(R.id.textView);
@@ -72,6 +67,11 @@ public class MainActivity extends AppCompatActivity {
                         current_image_alt=current_image_alt % 2;
                         Log.i("MyApp","currentimg,left right");
                         imgview.setImageResource(images[change][current_image_alt]);
+                        if (clickCount % 50 == 0 && (clickCount % 50) <= images.length && clickCount != 0) {
+                            Toast toast = Toast.makeText(getApplicationContext(), "New Baddie Unlocked !!!", Toast.LENGTH_SHORT);
+                            toast.setGravity(Gravity.CENTER,0,480);
+                            toast.show();
+                        }
                     }
                 }
         );
