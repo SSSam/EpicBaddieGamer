@@ -50,10 +50,10 @@ public class MainActivity2 extends AppCompatActivity {
         if (value > 100) {
             txtbox3.setTextColor(Color.GREEN);
         }
-        if (value > 100) {
+        if (value > 500) {
             txtbox4.setTextColor(Color.GREEN);
         }
-        if (value > 250) {
+        if (value > 750) {
             txtbox5.setTextColor(Color.GREEN);
         }
         if (value > 1000) {

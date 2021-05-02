@@ -73,17 +73,17 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="244dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="5mm"
-        android:gravity="center"
-        android:text="Dab Wizard (500)"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FF0000"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            android:id="@+id/textView6"
+            android:layout_width="244dp"
+            android:layout_height="52dp"
+            android:layout_marginBottom="5mm"
+            android:gravity="center"
+            android:text="Dab Wizard (750)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FF0000"
+            app:layout_constraintBottom_toTopOf="@+id/textView7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:id="@+id/textView3"
