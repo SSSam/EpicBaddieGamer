@@ -1,4 +1,4 @@
-# Welcome to EpicBaddieGamers
+# Welcome, EpicBaddieGamers
 ## Our Inspiration
 It may be 2021, but in our hearts dabbing is not dead like our souls! We wanted to spread the joy of dabbing once more, cause we could all use a little more cringe in our lives. 
 ## What it does
