@@ -6,7 +6,7 @@ Dab at the haters and unlock new baddies to dab with! Features 100% original, co
 ## How we built it
 Android Studio / Java / a LOT of blood sweat and tears
 ## Challenges we ran into
-Learning the new environment + language + anxiety+ Trying to be funny
+Learning the new environment + language + anxiety+ trying to be funny
 ## Accomplishments that we're proud of
 Learning new languages, working with our team, and making our project work! Also dabbing over 10,000 times. Wow!
 ## What we learned
