@@ -20,8 +20,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-
-   
     private Button left_right_dab;
     private Button achievements;
 
@@ -33,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     private int image_check = 1;
     public int clickCount = 0;
     private TextView countTextBox;
-
 
     // All left and right dabbing photos
     int[][] images = {
@@ -48,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
         {R.drawable.shrek_left, R.drawable.shrek_right},
         {R.drawable.waluigi_left, R.drawable.waluigi_right},
         {R.drawable.thanos_left, R.drawable.thanos_right}
-
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         dab_button_click();
@@ -60,12 +57,10 @@ public class MainActivity extends AppCompatActivity {
         change_dabbing_char1();
 
         achievements_buttonclick();
-
     }
 
-
-
     public void dab_button_click() {
+
         Button left_right_dab;
         imgView = findViewById(R.id.dab);
         left_right_dab= findViewById(R.id.dabButton);
@@ -74,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
         Toast toast = Toast.makeText(getApplicationContext(), "New Baddie Unlocked !!!", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER,0,480);
 
-
         left_right_dab.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -82,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View view){
 
                         clickCount++;
-                        image_check = clickCount/50+1;
+                        image_check = clickCount/250+1;
 
                         countTextBox = findViewById(R.id.textView);
                         String clicks = String.valueOf(clickCount);
@@ -95,22 +89,20 @@ public class MainActivity extends AppCompatActivity {
                         imgView.setImageResource(images[change][current_image_alt]);
 
                         // Show notification that a new baddie is unlocked
-                        if (clickCount % 50 == 0 && (clickCount / 50) <= images.length && clickCount != 0) {
+                        if (clickCount % 250 == 0 && (clickCount / 250) <= images.length && clickCount != 0) {
                             toast.show();
                             mp.start();
                         }
-
                     }
                 }
         );
     }
 
-
     // Right button to change dabbing character
     public void change_dabbing_char() {
+
         imgView = findViewById(R.id.dab);
         Button change_char = findViewById(R.id.DiffDab);
-
 
         change_char.setOnClickListener(
                 new View.OnClickListener() {
@@ -126,11 +118,9 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
-
-
-
     // Left button to change dabbing character
     public void change_dabbing_char1() {
+
         imgView = findViewById(R.id.dab);
         Button change_char1 = findViewById(R.id.DiffDab1);
         change_char1.setOnClickListener(
@@ -150,11 +140,9 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
-
-
     public void achievements_buttonclick() {
 
-        Button achievements = (Button) findViewById(R.id.button);
+        Button achievements = (Button) findViewById(R.id.achievementsButton);
 
         achievements.setOnClickListener(
                 new View.OnClickListener() {
@@ -168,6 +156,5 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
     }
-
 }
 

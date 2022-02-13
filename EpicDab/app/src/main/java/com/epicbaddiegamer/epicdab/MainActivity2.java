@@ -16,10 +16,6 @@ public class MainActivity2 extends AppCompatActivity {
     public TextView txtbox4;
     public TextView txtbox5;
     public TextView txtbox6;
-    public TextView txtbox7;
-    public TextView txtbox8;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,43 +23,36 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
         configureBackButton();
 
-        txtbox1 = findViewById(R.id.textView3);
+        txtbox1 = findViewById(R.id.textView1);
         txtbox2 = findViewById(R.id.textView2);
-        txtbox3 = findViewById(R.id.textView4);
-        txtbox4 = findViewById(R.id.textView5);
-        txtbox5 = findViewById(R.id.textView6);
-        txtbox6 = findViewById(R.id.textView7);
-        txtbox7 = findViewById(R.id.textView9);
-        txtbox8 = findViewById(R.id.textView11);
+        txtbox3 = findViewById(R.id.textView3);
+        txtbox4 = findViewById(R.id.textView4);
+        txtbox5 = findViewById(R.id.textView5);
+        txtbox6 = findViewById(R.id.textView6);
 
         Bundle bundle = getIntent().getExtras();
         int value = 0;
         if (bundle != null) {
             value = bundle.getInt("value");
         }
-        if (value > 10) {
+
+        if (value > 250) {
             txtbox1.setTextColor(Color.GREEN);
         }
-        if (value > 25) {
+        if (value > 500) {
             txtbox2.setTextColor(Color.GREEN);
         }
-        if (value > 100) {
+        if (value > 1000) {
             txtbox3.setTextColor(Color.GREEN);
         }
-        if (value > 500) {
+        if (value > 2500) {
             txtbox4.setTextColor(Color.GREEN);
         }
-        if (value > 750) {
+        if (value > 5000) {
             txtbox5.setTextColor(Color.GREEN);
         }
-        if (value > 1000) {
-            txtbox6.setTextColor(Color.GREEN);
-        }
-        if (value > 2500) {
-            txtbox7.setTextColor(Color.GREEN);
-        }
         if (value > 10000) {
-            txtbox8.setTextColor(Color.GREEN);
+            txtbox6.setTextColor(Color.GREEN);
         }
     }
 
@@ -73,9 +62,8 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-
             }
-        });
-
+        }
+        );
     }
 }
